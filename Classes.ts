@@ -56,6 +56,7 @@ car1.move(200);
 
 // Constructor
 
+/*
 class Vehicle {
     move(speed: number){
         console.log(`Move with speed ${speed} km/h`);
@@ -86,8 +87,22 @@ class Car2 extends Vehicle {
     }
 }
 const car2 = new Car2('white', 180);
+*/
 
+// Abstract Class
 
+abstract class Vehicle {
+    move(speed: number){
+        console.log(`Move with speed ${speed} km/h`);
+    }
+
+    stop(){
+        console.log('Stop');
+    }
+}
+
+class Car extends Vehicle {};
+//const c1 = new Vehicle; Error
 
 
 

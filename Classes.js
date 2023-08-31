@@ -64,6 +64,39 @@ const car1 = new Car;
 car1.move(200);
 */
 // Constructor
+/*
+class Vehicle {
+    move(speed: number){
+        console.log(`Move with speed ${speed} km/h`);
+    }
+
+    stop(){
+        console.log('Stop');
+    }
+}
+
+class Car extends Vehicle {
+    color: string;
+    maxSpeed: number;
+
+    constructor(color: string, maxSpeed: number){
+        super();
+        this.color = color;
+        this.maxSpeed = maxSpeed;
+    }
+}
+const car1 = new Car('black', 200);
+
+
+class Car2 extends Vehicle {
+
+    constructor( public color: string, public maxSpeed: number){
+        super();
+    }
+}
+const car2 = new Car2('white', 180);
+*/
+// Abstract Class
 var Vehicle = /** @class */ (function () {
     function Vehicle() {
     }
@@ -77,23 +110,10 @@ var Vehicle = /** @class */ (function () {
 }());
 var Car = /** @class */ (function (_super) {
     __extends(Car, _super);
-    function Car(color, maxSpeed) {
-        var _this = _super.call(this) || this;
-        _this.color = color;
-        _this.maxSpeed = maxSpeed;
-        return _this;
+    function Car() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     return Car;
 }(Vehicle));
-var car1 = new Car('black', 200);
-var Car2 = /** @class */ (function (_super) {
-    __extends(Car2, _super);
-    function Car2(color, maxSpeed) {
-        var _this = _super.call(this) || this;
-        _this.color = color;
-        _this.maxSpeed = maxSpeed;
-        return _this;
-    }
-    return Car2;
-}(Vehicle));
-var car2 = new Car2('white', 180);
+;
+//const c1 = new Vehicle; Error
