@@ -23,6 +23,7 @@ const car = new Car;
 
 // Modefiers
 
+/*
 class Vehicle {
     move(speed: number){
         console.log(`Move with speed ${speed} km/h`);
@@ -51,7 +52,9 @@ class Car extends Vehicle {
 
 const car1 = new Car;
 car1.move(200);
+*/
 
+// Constructor
 
 
 
