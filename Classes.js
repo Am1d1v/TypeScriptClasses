@@ -100,9 +100,6 @@ const car2 = new Car2('white', 180);
 var Vehicle = /** @class */ (function () {
     function Vehicle() {
     }
-    Vehicle.prototype.move = function (speed) {
-        console.log("Move with speed ".concat(speed, " km/h"));
-    };
     Vehicle.prototype.stop = function () {
         console.log('Stop');
     };
@@ -110,9 +107,14 @@ var Vehicle = /** @class */ (function () {
 }());
 var Car = /** @class */ (function (_super) {
     __extends(Car, _super);
-    function Car() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Car(color) {
+        var _this = _super.call(this) || this;
+        _this.color = color;
+        return _this;
     }
+    Car.prototype.move = function (speed) {
+        console.log("".concat(speed));
+    };
     return Car;
 }(Vehicle));
 ;

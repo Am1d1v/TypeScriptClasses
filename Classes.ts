@@ -91,17 +91,27 @@ const car2 = new Car2('white', 180);
 
 // Abstract Class
 
-abstract class Vehicle {
-    move(speed: number){
-        console.log(`Move with speed ${speed} km/h`);
-    }
+ abstract class Vehicle {
 
+   abstract move(speed: number): void
+    
     stop(){
         console.log('Stop');
     }
+
+    abstract color: string;
 }
 
-class Car extends Vehicle {};
+class Car extends Vehicle {
+
+    constructor(public color: string){
+        super();
+    }
+
+    move(speed: number): void {
+        console.log(`${speed}`);
+    }
+};
 //const c1 = new Vehicle; Error
 
 
