@@ -33,6 +33,37 @@ class Car implements ICar {
 const car = new Car;
 */
 // Modefiers
+/*
+class Vehicle {
+    move(speed: number){
+        console.log(`Move with speed ${speed} km/h`);
+    }
+
+    stop(){
+        console.log('Stop');
+    }
+
+    private currentSpeed(speed: number){
+        console.log(`Current speed is ${speed}`);
+    }
+
+    protected carLog(carId: number){
+        console.log(carId);
+    }
+};
+
+
+class Car extends Vehicle {
+    changeSpeed(speed: number){
+        this.move(speed);
+    }
+
+}
+
+const car1 = new Car;
+car1.move(200);
+*/
+// Constructor
 var Vehicle = /** @class */ (function () {
     function Vehicle() {
     }
@@ -42,24 +73,16 @@ var Vehicle = /** @class */ (function () {
     Vehicle.prototype.stop = function () {
         console.log('Stop');
     };
-    Vehicle.prototype.currentSpeed = function (speed) {
-        console.log("Current speed is ".concat(speed));
-    };
-    Vehicle.prototype.carLog = function (carId) {
-        console.log(carId);
-    };
     return Vehicle;
 }());
-;
 var Car = /** @class */ (function (_super) {
     __extends(Car, _super);
-    function Car() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Car(color, maxSpeed) {
+        var _this = _super.call(this) || this;
+        _this.color = color;
+        _this.maxSpeed = maxSpeed;
+        return _this;
     }
-    Car.prototype.changeSpeed = function (speed) {
-        this.move(speed);
-    };
     return Car;
 }(Vehicle));
-var car1 = new Car;
-car1.move(200);
+var car1 = new Car('black', 200);

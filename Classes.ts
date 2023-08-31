@@ -56,10 +56,27 @@ car1.move(200);
 
 // Constructor
 
+class Vehicle {
+    move(speed: number){
+        console.log(`Move with speed ${speed} km/h`);
+    }
 
+    stop(){
+        console.log('Stop');
+    }
+}
 
+class Car extends Vehicle {
+    color: string;
+    maxSpeed: number;
 
-
+    constructor(color: string, maxSpeed: number){
+        super();
+        this.color = color;
+        this.maxSpeed = maxSpeed;
+    }
+}
+const car1 = new Car('black', 200);
 
 
 
