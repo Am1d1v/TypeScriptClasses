@@ -79,7 +79,13 @@ class Car extends Vehicle {
 const car1 = new Car('black', 200);
 
 
+class Car2 extends Vehicle {
 
+    constructor( public color: string, public maxSpeed: number){
+        super();
+    }
+}
+const car2 = new Car2('white', 180);
 
 
 

@@ -86,3 +86,14 @@ var Car = /** @class */ (function (_super) {
     return Car;
 }(Vehicle));
 var car1 = new Car('black', 200);
+var Car2 = /** @class */ (function (_super) {
+    __extends(Car2, _super);
+    function Car2(color, maxSpeed) {
+        var _this = _super.call(this) || this;
+        _this.color = color;
+        _this.maxSpeed = maxSpeed;
+        return _this;
+    }
+    return Car2;
+}(Vehicle));
+var car2 = new Car2('white', 180);
